@@ -1,5 +1,5 @@
 """
-ASGI config for agenciador project.
+ASGI config for cargas_aqui project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'agenciador.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cargas_aqui.settings')
 
 application = get_asgi_application()
