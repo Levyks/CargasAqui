@@ -33,7 +33,13 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+if DEBUG:
+  ALLOWED_HOSTS = ['*']
+  
+else:
+  ALLOWED_HOSTS = [
+    'cargasaqui.marciolevy.repl.co'
+  ]
 
 
 # Application definition
@@ -53,9 +59,11 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware'
 ]
+
+if not DEBUG:
+  MIDDLEWARE += 'django.middleware.clickjacking.XFrameOptionsMiddleware'
 
 ROOT_URLCONF = 'cargas_aqui.urls'
 
