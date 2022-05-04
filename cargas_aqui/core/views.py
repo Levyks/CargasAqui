@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def showLogin(request):
+    return render(request, 'auth/login.html')
+
+def listCargas(request):
+    return render(request, 'cargas/list.html')

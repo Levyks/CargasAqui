@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Cargas | CargasAqui{% endblock %}
+
+{% block content %}
+
+    <h2 class="text-center">Cargas</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Cidades</th>
+                <th scope="col">UF</th>
+                <th scope="col">Entregas</th>
+                <th scope="col">Peso</th>
+                <th scope="col">Frete</th>
+                <th scope="col">Adiantamento</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
