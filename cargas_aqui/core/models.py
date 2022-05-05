@@ -70,7 +70,7 @@ class Cargo(models.Model):
 
     state = models.ForeignKey(
         State,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
         verbose_name=_('State')
     )
 
@@ -92,7 +92,7 @@ class Cargo(models.Model):
 
     status = models.ForeignKey(
         CargoStatus,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
         verbose_name=_('Status')
     )
 
@@ -112,6 +112,15 @@ class Cargo(models.Model):
         verbose_name=_('Note'),
         blank=True,
     )
+
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('Created At')
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name=_('Updated At')
+    )
     
     class Meta:
         verbose_name = _('Cargo')
@@ -120,3 +129,36 @@ class Cargo(models.Model):
     def __str__(self):
         return self.route
 
+class CargoStatusChange(models.Model):
+    
+    cargo = models.ForeignKey(
+        Cargo,
+        on_delete=models.CASCADE,
+        verbose_name=_('Cargo')
+    )
+
+    old_status = models.ForeignKey(
+        CargoStatus,
+        on_delete=models.RESTRICT,
+        verbose_name=_('Old status'),
+        related_name='status_changes_old'
+    )
+
+    new_status = models.ForeignKey(
+        CargoStatus,
+        on_delete=models.RESTRICT,
+        verbose_name=_('New status'),
+        related_name='status_changes_new'
+    )
+
+    timestamp = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('Timestamp')
+    )
+
+    class Meta:
+        verbose_name = _('Cargo Status Change')
+        verbose_name_plural = _('Cargo Status Changes')
+
+    def __str__(self):
+        return f'[{self.old_status.name} -> {self.new_status.name}] {self.cargo.route}'
