@@ -26,7 +26,7 @@ class CustomUserAdmin(UserAdmin):
 class CargoAdmin(admin.ModelAdmin):
 
     model = Cargo
-    list_display = ('route', 'state', 'numberOfDeliveries', 'weightInKg', 'payment', 'advancePayment', 'status', 'driverName', 'driverPhone')
+    list_display = ('route', 'get_state', 'numberOfDeliveries', 'weightInKg', 'payment', 'advancePayment', 'status', 'driverName', 'driverPhone')
     list_select_related = ('state', 'status')
 
     search_fields = ('route', 'driverName')
@@ -48,6 +48,10 @@ class CargoAdmin(admin.ModelAdmin):
             return 'table-success'
         return ''
 
+    @admin.display(ordering="state", description=_("State"))
+    def get_state(self, obj):
+        return obj.state.abbreviation
+        
 
 admin.site.register(User, CustomUserAdmin)
 admin.site.register(Cargo, CargoAdmin)
