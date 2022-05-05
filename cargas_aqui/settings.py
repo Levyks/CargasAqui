@@ -41,6 +41,9 @@ else:
     'cargasaqui.marciolevy.repl.co'
   ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://cargasaqui.marciolevy.repl.co'
+]
 
 # Application definition
 
