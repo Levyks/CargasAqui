@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from .models import User, City, State
+from .models import User, CargoStatus, Cargo
 
 class CustomUserAdmin(UserAdmin):    
     fieldsets = (
@@ -23,11 +23,14 @@ class CustomUserAdmin(UserAdmin):
     search_fields = ('email', 'first_name', 'last_name')
     ordering = ('email', 'first_name', 'last_name')
 
-class CityAdmin(admin.ModelAdmin):
-    
-    list_display = ('name', 'state')
-    list_filter = ('state',)
-    search_fields = ('name',)
+class CargoAdmin(admin.ModelAdmin):
+    class Media:
+        js = [
+            '/static/js/libs/jquery.maskedinput.min.js', 
+            '/static/js/admin/cargo.js'
+        ]
+
 
 admin.site.register(User, CustomUserAdmin)
-admin.site.register(City, CityAdmin)
+admin.site.register(Cargo, CargoAdmin)
+admin.site.register(CargoStatus)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-04 21:04-0300\n"
+"POT-Creation-Date: 2022-05-05 11:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,46 +18,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\admin.py:10
+#: .\cargas_aqui\core\admin.py:10
 msgid "Personal info"
 msgstr "Informações Pessoais"
 
-#: .\admin.py:11
+#: .\cargas_aqui\core\admin.py:11
 msgid "Permissions"
 msgstr "Permissões"
 
-#: .\admin.py:14
+#: .\cargas_aqui\core\admin.py:14
 msgid "Important dates"
 msgstr "Datas Importantes"
 
-#: .\apps.py:8
+#: .\cargas_aqui\core\apps.py:8
 msgid "Core"
 msgstr "Núcleo"
 
-#: .\models.py:25 .\models.py:48
+#: .\cargas_aqui\core\models.py:25 .\cargas_aqui\core\models.py:54
 msgid "Code"
 msgstr "Código"
 
-#: .\models.py:29 .\models.py:52
+#: .\cargas_aqui\core\models.py:29 .\cargas_aqui\core\models.py:48
 msgid "Name"
 msgstr "Nome"
 
-#: .\models.py:33
+#: .\cargas_aqui\core\models.py:33
 msgid "Abbreviation"
 msgstr "Abreviação"
 
-#: .\models.py:37 .\models.py:58
+#: .\cargas_aqui\core\models.py:37 .\cargas_aqui\core\models.py:74
 msgid "State"
 msgstr "Estado"
 
-#: .\models.py:38
+#: .\cargas_aqui\core\models.py:38
 msgid "States"
 msgstr "Estados"
 
-#: .\models.py:62
-msgid "City"
-msgstr "Cidade"
+#: .\cargas_aqui\core\models.py:58
+msgid "Cargo Status"
+msgstr "Status de Carga"
 
-#: .\models.py:63
-msgid "Cities"
-msgstr "Cidades"
+#: .\cargas_aqui\core\models.py:59
+msgid "Cargo Statuses"
+msgstr "Status de Carga"
+
+#: .\cargas_aqui\core\models.py:68
+msgid "Route"
+msgstr "Rota"
+
+#: .\cargas_aqui\core\models.py:78
+msgid "Number of deliveries"
+msgstr "Número de Entregas"
+
+#: .\cargas_aqui\core\models.py:82
+msgid "Weight in Kg"
+msgstr "Peso em Kg"
+
+#: .\cargas_aqui\core\models.py:86
+msgid "Payment"
+msgstr "Pagamento"
+
+#: .\cargas_aqui\core\models.py:90
+msgid "Advance payment"
+msgstr "Pagamento Adiantado"
+
+#: .\cargas_aqui\core\models.py:96
+msgid "Status"
+msgstr "Status"
+
+#: .\cargas_aqui\core\models.py:101
+msgid "Driver name"
+msgstr "Nome do motorista"
+
+#: .\cargas_aqui\core\models.py:107
+msgid "Driver phone"
+msgstr "Número do motorista"
+
+#: .\cargas_aqui\core\models.py:112
+msgid "Note"
+msgstr "Observações"
+
+#: .\cargas_aqui\core\models.py:117
+msgid "Cargo"
+msgstr "Carga"
+
+#: .\cargas_aqui\core\models.py:118
+msgid "Cargoes"
+msgstr "Cargas"
