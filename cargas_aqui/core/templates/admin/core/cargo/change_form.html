@@ -1,0 +1,30 @@
+{% extends "admin/change_form.html" %}
+
+{% load i18n tz %}
+
+{% block after_related_objects %}
+  <div class="module">
+    <h1>{% translate "Status Changes" %}</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>{% translate "Old" %}</th>
+          <th></th>
+          <th>{% translate "New" %}</th>
+          <th>{% translate "Timestamp" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for status_change in original.cargostatuschange_set.all %}
+          <tr>
+            <td>{{ status_change.old_status }}</td>
+            <td> -> </td>
+            <td>{{ status_change.new_status }}</td>
+            <td>{{ status_change.timestamp|date:"d/m/Y H:i:s" }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
+

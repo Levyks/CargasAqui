@@ -161,4 +161,4 @@ class CargoStatusChange(models.Model):
         verbose_name_plural = _('Cargo Status Changes')
 
     def __str__(self):
-        return f'[{self.old_status.name} -> {self.new_status.name}] {self.cargo.route}'
+        return f'[{self.timestamp}] {self.old_status.name} -> {self.new_status.name}'
