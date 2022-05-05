@@ -103,10 +103,12 @@
           $('.show-filters-btn').click(function(e) {
             e.preventDefault();
             $('.filters-window').show();
+            $('.show-filters-btn').hide();
           });
           $('.close-filters-btn').click(function(e) {
             e.preventDefault();
             $('.filters-window').hide();
+            $('.show-filters-btn')
           });
         });
       })(django.jQuery);
