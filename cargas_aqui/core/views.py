@@ -6,7 +6,9 @@ from .models import Cargo
 
 def listCargoes(request):
 
-    cargoes = Cargo.objects.all().select_related('state', 'status')
+    cargoes = Cargo.objects \
+        .filter(status__code='EM_CONTRATACAO') \
+        .select_related('state', 'status')
 
     page_number = request.GET.get('page', 1)
 
