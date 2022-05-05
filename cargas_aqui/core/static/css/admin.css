@@ -11,3 +11,24 @@
 .table-warning a, .table-success a {
     color: #2d6e8b;
 }
+
+.closable-module-header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+
+.closable-module-header h2 {
+    margin-bottom: 0!important;
+}
+
+.closable-module-header button {
+    color: red; 
+    font-weight: bold;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

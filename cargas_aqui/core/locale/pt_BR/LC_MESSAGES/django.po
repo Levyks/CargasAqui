@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 15:17-0300\n"
+"POT-Creation-Date: 2022-05-05 17:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,10 @@ msgstr "Permissões"
 msgid "Important dates"
 msgstr "Datas Importantes"
 
+#: .\core\admin.py:51 .\core\models.py:37 .\core\models.py:74
+msgid "State"
+msgstr "Estado"
+
 #: .\core\apps.py:8
 msgid "Core"
 msgstr "Núcleo"
@@ -45,10 +49,6 @@ msgstr "Nome"
 #: .\core\models.py:33
 msgid "Abbreviation"
 msgstr "Abreviação"
-
-#: .\core\models.py:37 .\core\models.py:74
-msgid "State"
-msgstr "Estado"
 
 #: .\core\models.py:38
 msgid "States"
@@ -122,7 +122,7 @@ msgstr "Status antigo"
 msgid "New status"
 msgstr "Novo status"
 
-#: .\core\models.py:156
+#: .\core\models.py:156 .\core\templates\admin\core\cargo\change_form.html:14
 msgid "Timestamp"
 msgstr "Data/Horário"
 
@@ -145,3 +145,11 @@ msgstr "Antigo"
 #: .\core\templates\admin\core\cargo\change_form.html:13
 msgid "New"
 msgstr "Novo"
+
+#: .\core\templates\admin\core\change_list.html:47
+msgid "Show Filters"
+msgstr "Mostrar Filtros"
+
+#: .\core\templates\admin\core\change_list.html:84
+msgid "Filters"
+msgstr "Filtros"

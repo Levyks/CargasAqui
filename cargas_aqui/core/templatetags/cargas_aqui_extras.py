@@ -14,3 +14,8 @@ def admin_row_classes(cl, index):
     if not hasattr(cl.model_admin, 'get_row_classes'):
         return u''
     return cl.model_admin.get_row_classes(cl.result_list[index], index)
+
+
+@register.simple_tag
+def number_of_active_filters(cl):
+    return len(cl.get_filters_params())
