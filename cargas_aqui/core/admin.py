@@ -26,7 +26,7 @@ class CustomUserAdmin(UserAdmin):
 class CargoAdmin(admin.ModelAdmin):
 
     model = Cargo
-    list_display = ('route', 'get_state', 'numberOfDeliveries', 'weightInKg', 'payment', 'advancePayment', 'status', 'driverName', 'driverPhone')
+    list_display = ('route', 'get_state', 'get_numberOfDeliveries', 'weightInKg', 'payment', 'advancePayment', 'status', 'driverName', 'driverPhone', 'note')
     list_select_related = ('state', 'status')
 
     search_fields = ('route', 'driverName')
@@ -47,6 +47,10 @@ class CargoAdmin(admin.ModelAdmin):
         if obj.status.code == 'CARREGANDO':
             return 'table-success'
         return ''
+
+    @admin.display(ordering="numberOfDeliveries", description=_("Deliveries"))
+    def get_numberOfDeliveries(self, obj):
+        return obj.numberOfDeliveries
 
     @admin.display(ordering="state", description=_("State"))
     def get_state(self, obj):
