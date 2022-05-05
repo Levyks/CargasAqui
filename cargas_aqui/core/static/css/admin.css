@@ -1,0 +1,13 @@
+.table-warning > td, .table-warning > th {
+    color: #000;
+    background-color: #e7d7a6;
+}
+
+.table-success > td, .table-success > th {
+    color: #000;
+    background-color: #d1e7dd;
+}
+
+.table-warning a, .table-success a {
+    color: #2d6e8b;
+}

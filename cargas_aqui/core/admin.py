@@ -24,11 +24,29 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('email', 'first_name', 'last_name')
 
 class CargoAdmin(admin.ModelAdmin):
+
+    model = Cargo
+    list_display = ('route', 'state', 'numberOfDeliveries', 'weightInKg', 'payment', 'advancePayment', 'status', 'driverName', 'driverPhone')
+    list_select_related = ('state', 'status')
+
+    search_fields = ('route', 'driverName')
+    list_filter = ('state', 'status')
+
     class Media:
         js = [
             '/static/js/libs/jquery.maskedinput.min.js', 
             '/static/js/admin/cargo.js'
         ]
+        css = {
+            'all': ('/static/css/admin.css',)
+        }
+
+    def get_row_classes(self, obj, index):
+        if obj.status.code == 'CONTRATADA':
+            return 'table-warning'
+        if obj.status.code == 'CARREGANDO':
+            return 'table-success'
+        return ''
 
 
 admin.site.register(User, CustomUserAdmin)
