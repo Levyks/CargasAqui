@@ -34,12 +34,9 @@ class CargoAdmin(admin.ModelAdmin):
 
     class Media:
         js = [
-            '/static/js/libs/jquery.maskedinput.min.js', 
-            '/static/js/admin/cargo.js'
+            'js/libs/jquery.maskedinput.min.js', 
+            'js/admin/cargo.js'
         ]
-        css = {
-            'all': ('/static/css/admin.css',)
-        }
 
     def get_row_classes(self, obj, index):
         if obj.status.code == 'CONTRATADA':

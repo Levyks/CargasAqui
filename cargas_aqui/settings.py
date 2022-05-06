@@ -40,12 +40,12 @@ if DEBUG:
 else:
   ALLOWED_HOSTS = [
     'cargasaqui.marciolevy.repl.co',
-    'agenciador.herokuapp.com'
+    'cargasaqui.herokuapp.com'
   ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://cargasaqui.marciolevy.repl.co',
-    'https://agenciador.herokuapp.com'
+    'https://cargasaqui.herokuapp.com'
 ]
 
 # Application definition
@@ -157,3 +157,7 @@ DEFAULT_FILE_STORAGE = 'mock_store.storages.MediaStorage'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_COOKIE_SECURE = not DEBUG
+SESSION_COOKIE_SECURE = not DEBUG
+SECURE_SSL_REDIRECT = not DEBUG
