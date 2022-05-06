@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 18:17-0300\n"
+"POT-Creation-Date: 2022-05-06 14:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,11 +30,11 @@ msgstr "Permissões"
 msgid "Important dates"
 msgstr "Datas Importantes"
 
-#: .\core\admin.py:51
+#: .\core\admin.py:48
 msgid "Deliveries"
 msgstr "Entregas"
 
-#: .\core\admin.py:55 .\core\models.py:37 .\core\models.py:74
+#: .\core\admin.py:52 .\core\models.py:37 .\core\models.py:74
 msgid "State"
 msgstr "Estado"
 
@@ -150,10 +150,14 @@ msgstr "Antigo"
 msgid "New"
 msgstr "Novo"
 
-#: .\core\templates\admin\core\change_list.html:47
+#: .\core\templates\admin\core\cargo\change_form.html:27
+msgid "No status changes"
+msgstr "Nenhuma mudança de status"
+
+#: .\core\templates\admin\core\change_list.html:48
 msgid "Show Filters"
 msgstr "Mostrar Filtros"
 
-#: .\core\templates\admin\core\change_list.html:87
+#: .\core\templates\admin\core\change_list.html:88
 msgid "Filters"
 msgstr "Filtros"
