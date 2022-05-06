@@ -37,6 +37,10 @@
                     <td>{{ cargo.advancePayment }}</td>
                     <td>{{ cargo.status.name }}</td>
                 </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="7" class="text-center">Nenhum resultado encontrado</td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
