@@ -39,11 +39,13 @@ if DEBUG:
   
 else:
   ALLOWED_HOSTS = [
-    'cargasaqui.marciolevy.repl.co'
+    'cargasaqui.marciolevy.repl.co',
+    'agenciador.herokuapp.com'
   ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://cargasaqui.marciolevy.repl.co'
+    'https://cargasaqui.marciolevy.repl.co',
+    'https://agenciador.herokuapp.com'
 ]
 
 # Application definition
