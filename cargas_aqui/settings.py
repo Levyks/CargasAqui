@@ -70,7 +70,7 @@ MIDDLEWARE = [
 ]
 
 if not DEBUG:
-  MIDDLEWARE += 'django.middleware.clickjacking.XFrameOptionsMiddleware'
+  MIDDLEWARE.append('django.middleware.clickjacking.XFrameOptionsMiddleware')
 
 ROOT_URLCONF = 'cargas_aqui.urls'
 
