@@ -28,6 +28,7 @@ class CargoAdmin(admin.ModelAdmin):
     model = Cargo
     list_display = ('route', 'get_state', 'get_numberOfDeliveries', 'weightInKg', 'payment', 'advancePayment', 'status', 'driverName', 'driverPhone', 'note')
     list_select_related = ('state', 'status')
+    list_editable = ('status', 'driverName', 'driverPhone')
 
     search_fields = ('route', 'driverName')
     list_filter = ('state', 'status')
