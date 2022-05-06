@@ -22,12 +22,7 @@
         </thead>
         <tbody>
             {% for cargo in cargoes %}
-                <tr
-                    class="
-                    {% if cargo.status.code == 'CONTRATADA'%} table-warning {% endif %}
-                    {% if cargo.status.code == 'CARREGANDO'%} table-success {% endif %}
-                    "
-                >
+                <tr class="{% if cargo.status.code == 'CONTRATADA'%}table-warning{% endif %}{% if cargo.status.code == 'CARREGANDO'%}table-success{% endif %}">
                     <td>{{ cargo.route }}</td>
                     <td>{{ cargo.state.abbreviation }}</td>
                     <td>{{ cargo.numberOfDeliveries }}</td>
