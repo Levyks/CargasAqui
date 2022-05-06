@@ -3,12 +3,9 @@
 {% block title %}Cargas | CargasAqui{% endblock %}
 
 {% block content %}
-
-    </br>
-    <div class="text-center">
+    <div class="text-center my-4">
       <img src="{% static 'img/logo.png' %}" alt="some text" width=120>
     </div>
-    </br>
     <table class="table table-hover">
         <thead class="table-primary">
             <tr>
@@ -16,9 +13,11 @@
                 <th scope="col">UF</th>
                 <th scope="col">Entregas</th>
                 <th scope="col">Peso</th>
-                <th scope="col">Frete</th>
-                <th scope="col">Adiantamento</th>
-                <th scope="col">Status</th>
+                {% comment %}
+                    <th scope="col">Frete</th>
+                    <th scope="col">Adiantamento</th>
+                    <th scope="col">Status</th>
+                {% endcomment %}
             </tr>
         </thead>
         <tbody>
@@ -33,9 +32,11 @@
                     <td>{{ cargo.state.abbreviation }}</td>
                     <td>{{ cargo.numberOfDeliveries }}</td>
                     <td>{{ cargo.weightInKg }}</td>
-                    <td>{{ cargo.payment }}</td>
-                    <td>{{ cargo.advancePayment }}</td>
-                    <td>{{ cargo.status.name }}</td>
+                    {% comment %}
+                        <td>{{ cargo.payment }}</td>
+                        <td>{{ cargo.advancePayment }}</td>
+                        <td>{{ cargo.status.name }}</td>
+                    {% endcomment %}
                 </tr>
             {% empty %}
                 <tr>
