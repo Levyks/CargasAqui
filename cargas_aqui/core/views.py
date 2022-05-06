@@ -8,7 +8,8 @@ def listCargoes(request):
 
     cargoes = Cargo.objects \
         .filter(status__code='EM_CONTRATACAO') \
-        .select_related('state', 'status')
+        .select_related('state', 'status') \
+        .order_by('-created_at')
 
     page_number = request.GET.get('page', 1)
 
